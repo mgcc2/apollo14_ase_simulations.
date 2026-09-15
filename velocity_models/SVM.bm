@@ -1,0 +1,47 @@
+# Apollo 14 near-surface model for AXISEM3D
+#
+# Vp: Mark & Sutton (1975), Apollo-14 adopted P-wave structure:
+#      104 m/s from 0–8.0 m and 299 m/s below 8.0 m.
+#      The 299 m/s value is carried to 84.5 m because a deeper
+#      Apollo-14-specific lower boundary is not established here.
+#
+# Vs: Horvath et al. (1980) station-14 spectral-ratio model.
+#      The detailed station-14 step values follow the preliminary
+#      Horvath et al. (1979) LPSC Table 1 associated with the final
+#      1980 journal study:
+#      35, 70, 106, 141, 190, 222 and 250 m/s.
+#      The discontinuities are modelling parameterisations and need
+#      not be literal geological interfaces.
+#
+# Density: adopted Mark & Sutton-style comparison values:
+#      1500 kg/m^3 from 0–8.0 m, 1700 kg/m^3 from 8.0–38.0 m,
+#      and 1900 kg/m^3 below 38.0 m. These density values are included
+#      as modelling inputs; they are not a standalone density profile
+#      published by Mark & Sutton (1975).
+#
+# The model spans exactly 0–84.5 m. Depth is positive downward.
+
+NAME        APOLLO14_MarkSuttonVp_HorvathStation14Vs_AdoptedDensity_0_to_84p5m
+ANELASTIC   true
+ANISOTROPIC false
+UNITS       m
+COLUMNS     depth vp vs rho qmu qkappa
+
+    0.0000   104.0000     35.0000   1500.0    5000.0   1000000.0
+    3.3000   104.0000     35.0000   1500.0    5000.0   1000000.0
+    3.3000   104.0000     70.0000   1500.0    5000.0   1000000.0
+    8.0000   104.0000     70.0000   1500.0    5000.0   1000000.0
+    8.0000   299.0000     70.0000   1700.0    5000.0   1000000.0
+   11.3000   299.0000     70.0000   1700.0    5000.0   1000000.0
+   11.3000   299.0000    106.0000   1700.0    5000.0   1000000.0
+   19.3000   299.0000    106.0000   1700.0    5000.0   1000000.0
+   19.3000   299.0000    141.0000   1700.0    5000.0   1000000.0
+   28.3000   299.0000    141.0000   1700.0    5000.0   1000000.0
+   28.3000   299.0000    190.0000   1700.0    5000.0   1000000.0
+   38.0000   299.0000    190.0000   1700.0    5000.0   1000000.0
+   38.0000   299.0000    190.0000   1900.0    5000.0   1000000.0
+   44.3000   299.0000    190.0000   1900.0    5000.0   1000000.0
+   44.3000   299.0000    222.0000   1900.0    5000.0   1000000.0
+   69.3000   299.0000    222.0000   1900.0    5000.0   1000000.0
+   69.3000   299.0000    250.0000   1900.0    5000.0   1000000.0
+   84.5000   299.0000    250.0000   1900.0    5000.0   1000000.0
