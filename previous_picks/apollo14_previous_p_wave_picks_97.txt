@@ -1,0 +1,179 @@
+# APOLLO 14 ACTIVE SEISMIC EXPERIMENT - PREVIOUSLY PUBLISHED P-WAVE PICKS
+# ==============================================================================
+#
+# This file combines 97 previously published/released Apollo 14 P-wave
+# arrival-time picks into one table.
+#
+# PICK COUNTS
+# -----------
+# Kovach_1971:      33 picks (22 DIRECT, 11 HEAD)
+# Martella_2022:    14 picks (10 DIRECT, 4 HEAD)
+# Villanova_2025:   39 picks (24 DIRECT, 15 HEAD)
+# Wang_2025:        11 picks (phase not assigned here)
+# Total:            97 picks
+#
+# REFERENCES AND PICK PROVENANCE
+# ------------------------------
+# Kovach_1971
+#   Kovach, R. L., Watkins, J. S. & Landers, T. (1971).
+#   Active Seismic Experiment. Apollo 14 Preliminary Science Report,
+#   NASA SP-272, pp. 163-174.
+#   Values here are digitised from the published travel-time plot (Figure 7-14).
+#
+# Martella_2022
+#   Martella, C. H., Mattei, E., Lauro, S. E., Cosciotti, B. & Pettinelli, E.
+#   (2022). Combining active seismic data from Apollo 14 and 16 with ground
+#   penetrating radar results to examine the shallow lunar subsurface.
+#   Planetary and Space Science, 214, 105460.
+#   DOI: 10.1016/j.pss.2022.105460
+#   Values here are approximate digitisation of the published Apollo 14
+#   travel-time panel.
+#
+# Villanova_2025
+#   Villanova, L. S., Yokoyama, E. & Maciel, S. T. R. (2025).
+#   Investigation into the lunar regolith layer using Apollo mission active
+#   seismic data. Earth, Planets and Space, 77, 190.
+#   DOI: 10.1186/s40623-025-02244-3
+#   Values here are from the authors' released Refrapy/Zenodo bandpass pick set.
+#   Only the final-paper bandpass picks are included.
+#
+# Wang_2025
+#   Wang, J., Schmerr, N. C., Lekic, V., Giles, J., Wike, L., Hoyle, A.,
+#   et al. (2025). Active seismic exploration of planetary subsurfaces via
+#   compressive sensing. Earth and Space Science, 12, e2024EA003828.
+#   DOI: 10.1029/2024EA003828
+#   Values here are approximate digitisation of the black original-trace
+#   points in Figure 10a.
+#
+# GEOMETRY AND CONVENTIONS
+# ------------------------
+# Apollo 14 geophone positions used here:
+#   G3 = 0.00 m
+#   G2 = 45.72 m
+#   G1 = 91.44 m
+#
+# shot_x_m is measured from G3.
+# offset_m = absolute source-receiver distance.
+#
+# For Kovach_1971 and Villanova_2025, shot and geophone identities are
+# recoverable and are listed explicitly.
+#
+# For Martella_2022, the published panel identifies source-receiver distance
+# and phase but not the individual shot/geophone identity. These fields are
+# therefore set to NA rather than guessed.
+#
+# For Wang_2025, the published figure allows distance and travel time to be
+# recovered, but not individual shot/geophone identity or a secure phase label.
+# shot, geophone and shot_x_m are therefore NA and phase is UNKNOWN.
+#
+# DIRECT = direct P-wave arrival.
+# HEAD   = refracted/head-wave P arrival.
+#
+# TABLE COLUMNS
+# -------------
+# source       Short source/reference identifier
+# phase        DIRECT, HEAD or UNKNOWN
+# shot         Apollo 14 shot number, or NA if not recoverable
+# geophone     G1, G2, G3, or NA if not recoverable
+# shot_x_m     Shot position from G3 in metres, or NA
+# offset_m     Absolute source-receiver offset in metres
+# pick_s       Published/digitised P-wave arrival time in seconds
+#
+source           phase    shot geophone   shot_x_m   offset_m     pick_s
+Kovach_1971      DIRECT      1 G1             0.00      91.44   0.913000
+Kovach_1971      DIRECT      1 G2             0.00      45.72   0.459000
+Kovach_1971      DIRECT      2 G2             4.57      41.15   0.405000
+Kovach_1971      DIRECT      2 G3             4.57       4.57   0.049000
+Kovach_1971      DIRECT      3 G1             9.14      82.30   0.848000
+Kovach_1971      DIRECT      3 G2             9.14      36.58   0.354000
+Kovach_1971      DIRECT      4 G1            13.72      77.72   0.706000
+Kovach_1971      DIRECT      4 G2            13.72      32.00   0.304000
+Kovach_1971      DIRECT      4 G3            13.72      13.72   0.130000
+Kovach_1971      DIRECT      7 G1            27.43      64.01   0.653000
+Kovach_1971      DIRECT      7 G2            27.43      18.29   0.160000
+Kovach_1971      DIRECT     11 G3            45.72      45.72   0.485000
+Kovach_1971      DIRECT     12 G1            50.29      41.15   0.409000
+Kovach_1971      DIRECT     12 G2            50.29       4.57   0.049000
+Kovach_1971      DIRECT     13 G2            54.86       9.14   0.086000
+Kovach_1971      DIRECT     13 G3            54.86      54.86   0.567000
+Kovach_1971      DIRECT     17 G1            73.15      18.29   0.169000
+Kovach_1971      DIRECT     18 G1            77.72      13.72   0.118000
+Kovach_1971      DIRECT     18 G3            77.72      77.72   0.814000
+Kovach_1971      DIRECT     19 G1            82.30       9.14   0.084000
+Kovach_1971      DIRECT     20 G1            86.87       4.57   0.046000
+Kovach_1971      DIRECT     21 G3            91.44      91.44   0.807000
+Kovach_1971      HEAD        1 G2             0.00      45.72   0.298000
+Kovach_1971      HEAD        3 G3             9.14       9.14   0.146000
+Kovach_1971      HEAD        4 G3            13.72      13.72   0.207000
+Kovach_1971      HEAD        7 G3            27.43      27.43   0.236000
+Kovach_1971      HEAD       11 G1            45.72      45.72   0.302000
+Kovach_1971      HEAD       11 G3            45.72      45.72   0.302000
+Kovach_1971      HEAD       17 G2            73.15      27.43   0.244000
+Kovach_1971      HEAD       18 G2            77.72      32.00   0.250000
+Kovach_1971      HEAD       19 G2            82.30      36.58   0.276000
+Kovach_1971      HEAD       20 G2            86.87      41.15   0.281000
+Kovach_1971      HEAD       21 G2            91.44      45.72   0.304000
+Martella_2022    DIRECT     NA NA               NA       0.00   0.004400
+Martella_2022    DIRECT     NA NA               NA       0.00  -0.002000
+Martella_2022    DIRECT     NA NA               NA       4.57   0.049500
+Martella_2022    DIRECT     NA NA               NA       4.57   0.025000
+Martella_2022    DIRECT     NA NA               NA       4.57   0.021100
+Martella_2022    DIRECT     NA NA               NA       9.14   0.108100
+Martella_2022    DIRECT     NA NA               NA       9.14   0.088100
+Martella_2022    DIRECT     NA NA               NA       9.14   0.080400
+Martella_2022    DIRECT     NA NA               NA      13.72   0.119500
+Martella_2022    DIRECT     NA NA               NA      18.29   0.143800
+Martella_2022    HEAD       NA NA               NA      27.43   0.220300
+Martella_2022    HEAD       NA NA               NA      27.43   0.205200
+Martella_2022    HEAD       NA NA               NA      41.15   0.251400
+Martella_2022    HEAD       NA NA               NA      45.72   0.279400
+Villanova_2025   DIRECT      1 G3             0.00       0.00   0.007353
+Villanova_2025   DIRECT      2 G3             4.57       4.57   0.054625
+Villanova_2025   DIRECT      3 G2             9.14      36.58   0.335629
+Villanova_2025   DIRECT      3 G3             9.14       9.14   0.091392
+Villanova_2025   DIRECT      4 G2            13.72      32.00   0.298862
+Villanova_2025   DIRECT      4 G3            13.72      13.72   0.125532
+Villanova_2025   DIRECT      7 G2            27.43      18.29   0.162299
+Villanova_2025   DIRECT      7 G3            27.43      27.43   0.204318
+Villanova_2025   DIRECT     11 G2            45.72       0.00   0.004727
+Villanova_2025   DIRECT     11 G3            45.72      45.72   0.306740
+Villanova_2025   DIRECT     12 G2            50.29       4.57   0.033615
+Villanova_2025   DIRECT     12 G3            50.29      50.29   0.335629
+Villanova_2025   DIRECT     13 G2            54.86       9.14   0.065130
+Villanova_2025   DIRECT     13 G3            54.86      54.86   0.361891
+Villanova_2025   DIRECT     17 G1            73.15      18.29   0.154421
+Villanova_2025   DIRECT     17 G2            73.15      27.43   0.248964
+Villanova_2025   DIRECT     17 G3            73.15      73.15   0.461686
+Villanova_2025   DIRECT     18 G1            77.72      13.72   0.122906
+Villanova_2025   DIRECT     18 G2            77.72      32.00   0.280478
+Villanova_2025   DIRECT     18 G3            77.72      77.72   0.485322
+Villanova_2025   DIRECT     19 G1            82.30       9.14   0.088766
+Villanova_2025   DIRECT     19 G2            82.30      36.58   0.327750
+Villanova_2025   DIRECT     20 G1            86.87       4.57   0.044120
+Villanova_2025   DIRECT     21 G1            91.44       0.00   0.004727
+Villanova_2025   HEAD        1 G1             0.00      91.44   0.411788
+Villanova_2025   HEAD        1 G2             0.00      45.72   0.351386
+Villanova_2025   HEAD        2 G1             4.57      86.87   0.398657
+Villanova_2025   HEAD        2 G2             4.57      41.15   0.343507
+Villanova_2025   HEAD        3 G1             9.14      82.30   0.388153
+Villanova_2025   HEAD        4 G1            13.72      77.72   0.380274
+Villanova_2025   HEAD        7 G1            27.43      64.01   0.330376
+Villanova_2025   HEAD       11 G1            45.72      45.72   0.296236
+Villanova_2025   HEAD       12 G1            50.29      41.15   0.277852
+Villanova_2025   HEAD       13 G1            54.86      36.58   0.262095
+Villanova_2025   HEAD       19 G3            82.30      82.30   0.495827
+Villanova_2025   HEAD       20 G2            86.87      41.15   0.346133
+Villanova_2025   HEAD       20 G3            86.87      86.87   0.508958
+Villanova_2025   HEAD       21 G2            91.44      45.72   0.369769
+Villanova_2025   HEAD       21 G3            91.44      91.44   0.527341
+Wang_2025        UNKNOWN    NA NA               NA       0.00   0.000000
+Wang_2025        UNKNOWN    NA NA               NA       4.60   0.048000
+Wang_2025        UNKNOWN    NA NA               NA       4.60   0.052000
+Wang_2025        UNKNOWN    NA NA               NA      11.50   0.090000
+Wang_2025        UNKNOWN    NA NA               NA      17.20   0.151000
+Wang_2025        UNKNOWN    NA NA               NA      34.30   0.279000
+Wang_2025        UNKNOWN    NA NA               NA      34.30   0.283000
+Wang_2025        UNKNOWN    NA NA               NA      40.00   0.290000
+Wang_2025        UNKNOWN    NA NA               NA      40.00   0.301000
+Wang_2025        UNKNOWN    NA NA               NA      45.70   0.313000
+Wang_2025        UNKNOWN    NA NA               NA      45.70   0.318000
