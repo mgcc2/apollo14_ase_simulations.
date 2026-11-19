@@ -20,10 +20,6 @@ MODELS = {
     "LGVM": Path(
         "/LGVM.bm"
     ),
-
-    "SVM": Path(
-        "SVM.bm"
-    ),
 }
 
 
